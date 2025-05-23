@@ -1,45 +1,118 @@
-<!-- Wireframe-style HTML layout for UFG Manufacturing Homepage -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UFG Manufacturing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .container {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-    body { font-family: sans-serif; margin: 0; padding: 0; color: #333; background: #f9f9f9; }
-    header, section, footer { padding: 40px 20px; text-align: center; }
-   header {  background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);  position: sticky;  top: 0;  z-index: 10; padding: 20px 0;}
-    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
-    .hero-img img {display: block;  width: 100%; height: auto;}
-    .hero h1 { font-size: 2.5em; margin-bottom: 20px; }
-    .hero p { font-size: 1.2em; max-width: 600px; margin: 0 auto 30px; }
-    .hero .buttons a { margin: 10px; padding: 12px 20px; background: #333; color: #fff; text-decoration: none; border-radius: 5px; display: inline-block; }
-    .about, .contact { background: #fff; }
-    .brands { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; background: #f0f0f0; }
-    .brand-card { width: 300px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .brand-card h3 { margin-top: 0; }
-    .brand-card p { font-size: 0.95em; }
-    .brand-card a { display: inline-block; margin-top: 10px; text-decoration: none; color: #0066cc; font-weight: bold; }
-    footer {font-size: 0.9em; background: #333; color: #fff; padding: 2px 0;}
-    html {scroll-padding-top: 120px; /* adjust based on your header height */}
-
-    .brand-card-link { text-decoration: none;  color: inherit; display: inline-block;}
-    .brand-card-link:hover .brand-card {box-shadow: 0 4px 10px rgba(0,0,0,0.15); transform: translateY(-2px); transition: all 0.2s ease;}
-    .brand-card a,
-    .brand-card span {text-decoration: none;  color: inherit;}
-
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #ffffff;
+      padding: 16px 40px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .brands {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      background: #f0f2f5;
+    }
+    .brand-card-link {
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .brand-card-link:hover .brand-card {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .brand-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .brand-card img {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+    .brand-card h3 {
+      margin: 10px 0;
+      font-size: 1.25rem;
+    }
+    .brand-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .brand-card span {
+      font-weight: 600;
+      color: #0056b3;
+    }
+    .about, .contact {
+      padding: 60px 40px;
+      background: #ffffff;
+      text-align: center;
+    }
+    .about h2, .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .about p, .contact p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    hr.divider {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 0;
+      width: 80%;
+      background: #fff;
+    }
+    footer {
+      font-size: 0.9rem;
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 12px 0;
+    }
+    html {
+      scroll-padding-top: 120px;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-
   <header>
-         <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/ufg-mfg-v2.png" alt="UFG Manufacturing Logo" style="height: 100px;" />
+    <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/ufg-mfg-v2.png" alt="UFG Manufacturing Logo" style="height: 70px;" />
     <nav>
       <a href="#about">About</a>
       <a href="#brands">Our Brands</a>
@@ -47,57 +120,53 @@
     </nav>
   </header>
 
-<section class="hero-img">
-  <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/Hero-UFG-v2400-height.png" alt="UFG Manufacturing Hero Image" />
-</section>
-
-
+  <section class="hero-img">
+    <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/Hero-UFG-v2400-height.png" alt="UFG Manufacturing Hero Image" />
+  </section>
 
   <section class="brands" id="brands">
-
-<a href="https://norvanivel.com" target="_blank" class="brand-card-link">
-  <div class="brand-card">
-  <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/NN-logo.png" alt="NorvaNivel Logo" style="height: 60px; margin-bottom: 10px;" />
-  <h3>NorvaNivel</h3>
-  <p>Creating whole-brain learning environments that empower every learner and support educators through thoughtfully crafted, American-made furniture.</p>
-    <span style="font-weight: bold; color: #0066cc;">Visit Site</span>
-  </div>
-</a>
-
-<a href="https://pedagogyfurniture.com" target="_blank" class="brand-card-link">
-  <div class="brand-card">
-  <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/ped-logo.png" alt="Pedagogy Logo" style="height: 60px; margin-bottom: 10px;" />
-  <h3>Pedagogy Furniture</h3>
-  <p>Delivering solutions designed by teachers, for teachers — each collection anchored by a signature product that directly supports modern pedagogy.</p>
-    <span style="font-weight: bold; color: #0066cc;">Visit Site</span>
-  </div>
-</a>
-
-<a href="https://pfhospitalityfurniture.com" target="_blank" class="brand-card-link">
-  <div class="brand-card">
-  <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/pf-hosp-logo2.png" alt="PF Hospitality Logo" style="height: 60px; margin-bottom: 10px;" />
-  <h3>PF Hospitality</h3>
-  <p>We are a full-service furniture partner with U.S. manufacturing and global sourcing, providing custom solutions for hotels, restaurants, and entertainment venues.</p>
-    <span style="font-weight: bold; color: #0066cc;">Visit Site</span>
-  </div>
-</a>
- 
+    <a href="https://norvanivel.com" target="_blank" class="brand-card-link">
+      <div class="brand-card">
+        <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/NN-logo.png" alt="NorvaNivel Logo" />
+        <h3>NorvaNivel</h3>
+        <p>Creating whole-brain learning environments that empower every learner and support educators through thoughtfully crafted, American-made furniture.</p>
+        <span>Visit Site</span>
+      </div>
+    </a>
+    <a href="https://pedagogyfurniture.com" target="_blank" class="brand-card-link">
+      <div class="brand-card">
+        <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/ped-logo.png" alt="Pedagogy Logo" />
+        <h3>Pedagogy Furniture</h3>
+        <p>Delivering solutions designed by teachers, for teachers — each collection anchored by a signature product that directly supports modern pedagogy.</p>
+        <span>Visit Site</span>
+      </div>
+    </a>
+    <a href="https://pfhospitalityfurniture.com" target="_blank" class="brand-card-link">
+      <div class="brand-card">
+        <img src="https://raw.githubusercontent.com/jhalloran8/ufg-manufacturing-site/main/pf-hosp-logo2.png" alt="PF Hospitality Logo" />
+        <h3>PF Hospitality</h3>
+        <p>We are a full-service furniture partner with U.S. manufacturing and global sourcing, providing custom solutions for hotels, restaurants, and entertainment venues.</p>
+        <span>Visit Site</span>
+      </div>
+    </a>
   </section>
+
   <section class="about" id="about">
     <h2>About UFG Manufacturing</h2>
-    <p>At UFG Manufacturing, we bring furniture concepts to life through innovation and specialization. Our brands deliver agile modern classroom solutions, teacher-designed products, and globally sourced hospitality furnishings built to perform.  With manufacturing based in Texas, corporate offices in Ohio, and international sourcing with over 100 partners, we have the capability to handle a variety of furniture solutions for both the educational and hospitality markets. </p>
+    <p>At UFG Manufacturing, we bring furniture concepts to life through innovation and specialization. Our brands deliver agile modern classroom solutions, teacher-designed products, and globally sourced hospitality furnishings built to perform. With manufacturing based in Texas, corporate offices in Ohio, and international sourcing with over 100 partners, we have the capability to handle a variety of furniture solutions for both the educational and hospitality markets.</p>
   </section>
 
-<hr style="border: none; border-top: 2px solid #ccc; margin: 0 auto; width: 80%; background: #fff;" />
+  <hr class="divider" />
 
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
- <p>Email: <a href="mailto:jsweazy@ufgmanufacturing.com">jsweazy@ufgmanufacturing.com</a> | Phone: (972) 685-6223</p>
-
+    <p>Email: <a href="mailto:jsweazy@ufgmanufacturing.com">jsweazy@ufgmanufacturing.com</a> | Phone: (972) 685-6223</p>
   </section>
 
   <footer>
     <p>© 2025 UFG Manufacturing. All rights reserved.</p>
   </footer>
 </body>
+</html>
+
 </html>
