@@ -31,6 +31,19 @@
       font-weight: 600;
       font-size: 1rem;
     }
+    .quote-button {
+      margin-left: 20px;
+      background: #0056b3;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+    .quote-button:hover {
+      background: #004a99;
+    }
     .hero-img img {
       width: 100%;
       height: auto;
@@ -38,7 +51,7 @@
     }
     .brands {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
       padding: 60px 40px;
       background: #f0f2f5;
@@ -47,6 +60,7 @@
       text-decoration: none;
       color: inherit;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
     }
     .brand-card-link:hover .brand-card {
       transform: translateY(-4px);
@@ -58,6 +72,7 @@
       padding: 30px;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex: 1;
     }
     .brand-card img {
       height: 60px;
@@ -117,6 +132,7 @@
       <a href="#about">About</a>
       <a href="#brands">Our Brands</a>
       <a href="#contact">Contact</a>
+      <a href="mailto:jsweazy@ufgmanufacturing.com" class="quote-button">Get A Quote</a>
     </nav>
   </header>
 
@@ -167,6 +183,4 @@
     <p>© 2025 UFG Manufacturing. All rights reserved.</p>
   </footer>
 </body>
-</html>
-
 </html>
